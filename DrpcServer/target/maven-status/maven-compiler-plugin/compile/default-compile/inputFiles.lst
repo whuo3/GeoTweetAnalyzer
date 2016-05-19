@@ -1,5 +1,0 @@
-/vagrant/Team525/geoTweet/src/main/java/geoTweet/spout/TweetSpout.java
-/vagrant/Team525/geoTweet/src/main/java/geoTweet/TweetTopology.java
-/vagrant/Team525/geoTweet/src/main/java/geoTweet/bolts/ParseTweetBolt.java
-/vagrant/Team525/geoTweet/src/main/java/geoTweet/bolts/CountBolt.java
-/vagrant/Team525/geoTweet/src/main/java/geoTweet/bolts/ReportBolt.java
