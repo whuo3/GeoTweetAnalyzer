@@ -1,23 +1,23 @@
 gulp   = require('gulp')
-jade   = require('gulp-jade')
-scss   = require('gulp-scss')
+pug    = require('gulp-pug')
+sass   = require('gulp-sass')
 ts     = require('gulp-typescript')
 debug  = require('gulp-debug')
 gulpif = require('gulp-if')
 argv   = require('yargs').argv
 concat = require('gulp-concat')
 
-gulp.task 'jade', ->
-    gulp.src('./src/**/*.jade')
-        .pipe(jade(
+gulp.task 'pug', ->
+    gulp.src('./src/**/*.pug')
+        .pipe(pug(
             pretty: true
         ))
         .pipe(gulp.dest('./build'))
 
-gulp.task 'scss', ->
+gulp.task 'sass', ->
     gulp.src('./src/styles/**/*.scss')
-        .pipe(gulpif(argv.debug, debug({ title: 'scss' })))
-        .pipe(scss())
+        .pipe(gulpif(argv.debug, debug({ title: 'sass' })))
+        .pipe(sass())
         .pipe(gulp.dest('./build/styles'))
 
 gulp.task 'typescript', ->
@@ -46,8 +46,9 @@ gulp.task 'vendor', ->
         .pipe(gulp.dest('./build/styles'))
 
 gulp.task 'watch', ->
-    gulp.watch('./src/**/*.jade', ['jade'])
-    gulp.watch('./src/**/*.scss', ['scss'])
+    gulp.watch('./src/**/*.pug', ['pug'])
+    gulp.watch('./src/**/*.scss', ['sass'])
     gulp.watch('./src/**/*.ts', ['typescript'])
 
-gulp.task 'default', ['vendor', 'jade', 'scss', 'typescript', 'watch']
+gulp.task 'production', ['vendor', 'pug', 'sass', 'typescript']
+gulp.task 'default', ['production', 'watch']

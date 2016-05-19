@@ -1,4 +1,4 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {GoogleMapComponent} from './google.map.component';
+import {GlobalRankComponent} from './global.rank.component';
 
-bootstrap(GoogleMapComponent);
+bootstrap(GlobalRankComponent);

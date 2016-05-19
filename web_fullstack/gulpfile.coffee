@@ -1,5 +1,6 @@
-gulp = require('gulp')
-gls  = require('gulp-live-server')
+gulp   = require('gulp')
+gls    = require('gulp-live-server')
+coffee = require('gulp-coffee')
 
 gulp.task 'serve', ->
     server = gls.new('server.coffee')
@@ -8,5 +9,10 @@ gulp.task 'serve', ->
         server.start.bind(server)()
         console.log 'server reloaded'
     )
+
+gulp.task 'production', ->
+    gulp.src('./server.coffee')
+        .pipe(coffee({bare: true}))
+        .pipe(gulp.dest('.'))
 
 gulp.task 'default', ['serve']
