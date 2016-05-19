@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="geoTweet.AppTest" duration-ms="11" started-at="2016-05-08T12:54:02Z" finished-at="2016-05-08T12:54:02Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="11" started-at="2016-05-08T12:54:02Z" finished-at="2016-05-08T12:54:02Z">
+    </test> <!-- Command line test -->
+  </suite> <!-- geoTweet.AppTest -->
+</testng-results>
